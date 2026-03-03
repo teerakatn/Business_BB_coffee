@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ร้าน BB Coffee แห่งใหม่ที่ให้บริการกาแฟคุณภาพสูง บรรยากาศอบอุ่น และบริการที่รวดเร็ว" />
+  <title>BB Coffee — ร้าน BB Coffee</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Inter สำหรับ UI ระดับ Enterprise -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========================================
+       NAVBAR — Fixed top, hamburger on mobile
+  ======================================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__container">
+
+      <!-- Logo -->
+      <a href="#hero" class="navbar__logo" aria-label="BB Coffe Home">
+        <span class="navbar__logo-icon"><img src="images/coffee.svg" alt="BB Coffee Logo"></span>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-brand">BB Coffee</span>
+          <span class="navbar__logo-sub">ร้าน BB Coffee</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="navbar__nav" aria-label="Main navigation">
+        <ul class="navbar__list" role="list">
+          <li><a href="#section-org"     class="navbar__link" data-section="section-org">โครงสร้างองค์กร</a></li>
+          <li><a href="#section-chart"   class="navbar__link" data-section="section-chart">แผนผังองค์กร</a></li>
+          <li><a href="#section-model"   class="navbar__link" data-section="section-model">Business Model</a></li>
+          <li><a href="#section-info"    class="navbar__link" data-section="section-info">ระบบสารสนเทศ</a></li>
+          <li><a href="#section-promo"   class="navbar__link" data-section="section-promo">โปรโมชั่น</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button class="navbar__hamburger" id="hamburgerBtn" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div class="navbar__mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+      <ul class="navbar__mobile-list" role="list">
+        <li><a href="#section-org"   class="navbar__mobile-link">1. โครงสร้างองค์กร</a></li>
+        <li><a href="#section-chart" class="navbar__mobile-link">2. แผนผังองค์กร</a></li>
+        <li><a href="#section-model" class="navbar__mobile-link">3. Business Model</a></li>
+        <li><a href="#section-info"  class="navbar__mobile-link">4. ระบบสารสนเทศ</a></li>
+        <li><a href="#section-promo" class="navbar__mobile-link">5. โปรโมชั่น</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main content wrapper -->
+  <main>
+
+    <!-- ========================================
+         HERO SECTION
+    ======================================== -->
+    <section class="hero" id="hero" aria-label="Hero section">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content fade-in-up">
+        <div class="hero__badge">
+          <span class="badge__dot" aria-hidden="true"></span>
+          Coffee Shop
+        </div>
+        <h1 class="hero__title">
+          ร้าน BB Coffee
+          <span class="hero__title-highlight">(BB Coffee)</span>
+        </h1>
+        <p class="hero__subtitle">
+          กาเเฟอร่อย &nbsp;·&nbsp; ร้านสะอาด &nbsp;·&nbsp; บริการรวดเร็ว
+        </p>
+        <div class="hero__stats" role="list">
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-value" data-count="4">0</span>
+            <span class="hero__stat-label">พนักงาน</span>
+          </div>
+          <div class="hero__stat hero__stat--divider" aria-hidden="true"></div>
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-value" data-count="1">0</span>
+            <span class="hero__stat-label">สาขา</span>
+          </div>
+          <div class="hero__stat hero__stat--divider" aria-hidden="true"></div>
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-value" data-count="80000" data-prefix="฿" data-suffix="K">0</span>
+            <span class="hero__stat-label">(+/-)กำไร/เดือน (บาท)</span>
+          </div>
+        </div>
+        <a href="#section-org" class="btn btn--primary hero__cta">
+          ดูข้อมูลบริษัท
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14m7-7-7 7-7-7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 1 — โครงสร้างองค์กร
+    ======================================== -->
+    <section class="section" id="section-org" aria-labelledby="org-heading">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section__header fade-in-up">
+          <div class="section__tag">01</div>
+          <h2 class="section__title" id="org-heading">โครงสร้างองค์กร</h2>
+          <p class="section__desc">ข้อมูลสำคัญทางธุรกิจและการวิเคราะห์ความคุ้มค่าของบริษัท</p>
+        </div>
+
+        <!-- Row 1 — Company Info + Services + Customers -->
+        <div class="cards-grid cards-grid--3 fade-in-up">
+
+          <!-- Card: Company Info -->
+          <article class="card card--accent-blue" aria-label="ข้อมูลบริษัท">
+            <div class="card__icon-wrap card__icon-wrap--blue" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3 class="card__title">ข้อมูลบริษัท</h3>
+            <dl class="info-list">
+              <dt class="info-list__label">ชื่อบริษัท</dt>
+              <dd class="info-list__value">บริษัท BB Coffee จำกัด (BB Coffee)</dd>
+              <dt class="info-list__label">ประเภทธุรกิจ</dt>
+              <dd class="info-list__value">ขายกาแฟและอาหาร</dd>
+            </dl>
+          </article>
+
+          <!-- Card: Services -->
+          <article class="card card--accent-orange" aria-label="ลักษณะบริการ">
+            <div class="card__icon-wrap card__icon-wrap--orange" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3 class="card__title">ลักษณะบริการ</h3>
+            <ul class="bullet-list">
+              <li>ขายกาแฟและของหวาน</li>
+              <li>บริการด้านการเสิร์ฟ</li>
+              <li>บริการถ่ายภาพและบันทึกวิดีโอ</li>
+            </ul>
+          </article>
+
+          <!-- Card: Customers -->
+          <article class="card card--accent-green" aria-label="กลุ่มลูกค้า">
+            <div class="card__icon-wrap card__icon-wrap--green" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="card__title">กลุ่มลูกค้า</h3>
+            <div class="tag-group" aria-label="กลุ่มลูกค้าของบริษัท">
+              <span class="tag">นักท่องเที่ยว</span>
+              <span class="tag">กรุ๊ปทัว</span>
+              <span class="tag">คนในพื้นที่</span>
+              <span class="tag">กลุ่มคนรักกาแฟ</span>
+              <span class="tag">กลุ่มคนรักการถ่ายภาพ</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Employee Table -->
+        <div class="table-card fade-in-up" aria-label="ตารางจำนวนพนักงาน">
+          <div class="table-card__header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            <h3>จำนวนพนักงาน — รวม 4 คน</h3>
+          </div>
+          <div class="table-wrapper" role="region" aria-label="ตารางพนักงาน" tabindex="0">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">ตำแหน่ง</th>
+                  <th scope="col" class="text-center">จำนวน</th>
+                  <th scope="col" class="text-right">เงินเดือน (บาท/เดือน)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>พนักงานชงกาเเฟ</td><td class="text-center">2</td><td class="text-right salary-value">15,000</td></tr>
+                <tr><td>พนักงานบริการลูกค้า</td><td class="text-center">2</td><td class="text-right salary-value">15,000</td></tr>
+              
+              </tbody>
+              <tfoot>
+                <tr class="table-total">
+                  <td colspan="2">รวมค่าเงินเดือนต่อเดือน</td>
+                  <td class="text-right">≈ 60,000 บาท</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- Row 2 — Financials overview cards -->
+        <div class="cards-grid cards-grid--2 fade-in-up">
+
+          <!-- Equipment & Location -->
+          <article class="card" aria-label="ค่าใช้จ่ายรายดือน">
+            <div class="card__icon-wrap card__icon-wrap--purple" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="card__title">ค่าใช้จ่ายรายดือน</h3>
+            <ul class="bullet-list">
+              <li>พนักงาน 4 คน — <strong>60,000 บาท</strong></li>
+              <li>ค่าน้ำ — <strong>3,000 บาท</strong></li>
+              <li>ค่าไฟ — <strong>17,000 บาท</strong></li>
+              <li>ค่า wifi — <strong>2,000 บาท</strong></li>
+              <li>ค่าการตลาดยิงเเอด — <strong>3,000 บาท</strong></li>
+              <li>ค่าเช่า POS — <strong>2,000 บาท</strong></li>
+              <li>เติมสต๊อกของ — <strong>5,000 บาท</strong></li>
+            </ul>
+            <div class="card__total">
+              รวม ≈ <span>90,000 บาท</span>
+            </div>
+          </article>
+
+          <!-- Opening Budget -->
+          <article class="card" aria-label="งบประมาณเปิดร้าน">
+            <div class="card__icon-wrap card__icon-wrap--orange" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="card__title">งบประมาณเปิดร้าน</h3>
+            <ul class="bullet-list">
+              <li>เครื่องชงกาเเฟ 2 ตัว 40000 บาท  — <strong>40,000 บาท</strong></li>
+              <li>เครื่องบดกาเเฟ 2 ตัว — <strong>30,000 บาท</strong></li>
+              <li>ต้นทุนวัตถุดิบ — <strong>50,000 บาท</strong></li>
+              <li>ของตกเเต่งร้านเเละเฟอนิเจอร์ — <strong>100,000 บาท</strong></li>
+              <li>จดทะเบียนพาณิชย์เเละขอใบอนุญาติ — <strong>2,000 บาท</strong></li>
+              <li>ค่าเช่าสถานที่ (มัดจำ+ล่วงหน้า) — <strong>50,000 บาท</strong></li>
+              <li>ตู้เเช่เเข็ง — <strong>15,000 บาท</strong></li>
+              <li>เครื่องทำน้ำเเข็ง — <strong>10,000 บาท</strong></li>
+            </ul>
+            <div class="card__total">
+              รวม ≈ <span>300,000 บาท</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- KPI Summary Metrics -->
+        <div class="kpi-row fade-in-up" role="list" aria-label="ตัวเลขสำคัญทางธุรกิจ">
+
+          <div class="kpi-card" role="listitem">
+            <span class="kpi-card__label">ค่าใช้จ่าย/เดือน</span>
+            <span class="kpi-card__value">90,000</span>
+            <span class="kpi-card__unit">บาท</span>
+            <div class="kpi-card__bar kpi-card__bar--red"></div>
+          </div>
+
+          <div class="kpi-card" role="listitem">
+            <span class="kpi-card__label">รายรับ/เดือน</span>
+            <span class="kpi-card__value">230,000</span>
+            <span class="kpi-card__unit">บาท</span>
+            <div class="kpi-card__bar kpi-card__bar--blue"></div>
+          </div>
+
+          <div class="kpi-card kpi-card--profit" role="listitem">
+            <span class="kpi-card__label">กำไรสุทธิ/เดือน</span>
+            <span class="kpi-card__value">80,000</span>
+            <span class="kpi-card__unit">บาท</span>
+            <div class="kpi-card__bar kpi-card__bar--green"></div>
+          </div>
+
+          <div class="kpi-card" role="listitem">
+            <span class="kpi-card__label">งบประมาณการเปิดร้าน</span>
+            <span class="kpi-card__value">300,000</span>
+            <span class="kpi-card__unit">บาท</span>
+            <div class="kpi-card__bar kpi-card__bar--purple"></div>
+          </div>
+        </div>
+
+        <!-- Financial Detail Cards -->
+        <div class="cards-grid cards-grid--3 fade-in-up">
+
+
+          <!-- Revenue -->
+          <article class="card" aria-label="รายรับต่อเดือน">
+            <div class="card__icon-wrap card__icon-wrap--blue" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+            <h3 class="card__title">รายรับต่อเดือน</h3>
+            <ul class="cost-list">
+              <li><span>คนเข้ามาใช้บริการร้านประมาณ 50 คน/วัน</span><span>150 บาท/คน</span></li>
+              <li><span>รายได้ต่อเดือน</span><span>230,000 บาท</span></li>
+            </ul>
+            <div class="card__total">รวม ≈ <span>230,000 บาท</span></div>
+          </article>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 2 — แผนผังองค์กร
+    ======================================== -->
+    <section class="section section--alt" id="section-chart" aria-labelledby="chart-heading">
+      <div class="container">
+        <div class="section__header fade-in-up">
+          <div class="section__tag">02</div>
+          <h2 class="section__title" id="chart-heading">แผนผังองค์กร</h2>
+          <p class="section__desc">โครงสร้างการบริหารงานภายในร้าน BB Coffee</p>
+        </div>
+        <div class="image-showcase fade-in-up">
+          <figure class="showcase-figure">
+            <img
+              src="images/diagram_coffe.png"
+              alt="แผนผังองค์กร ร้าน BB Coffee"
+              class="showcase-img"
+              loading="lazy"
+              onerror="this.closest('.showcase-figure').innerHTML=fallbackImg('แผนผังองค์กร')"
+            />
+            <figcaption>แผนผังโครงสร้างองค์กร ร้าน BB Coffee</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 3 — Business Model
+    ======================================== -->
+    <section class="section" id="section-model" aria-labelledby="model-heading">
+      <div class="container">
+        <div class="section__header fade-in-up">
+          <div class="section__tag">03</div>
+          <h2 class="section__title" id="model-heading">Business Model</h2>
+          <p class="section__desc">รูปแบบธุรกิจและกลยุทธ์การสร้างรายได้ของร้าน BB Coffee</p>
+        </div>
+        <div class="image-showcase fade-in-up">
+          <figure class="showcase-figure">
+            <img
+              src="images/business_model.png"
+              alt="Business Model ร้าน BB Coffee"
+              class="showcase-img"
+              loading="lazy"
+              onerror="this.closest('.showcase-figure').innerHTML=fallbackImg('Business Model')"
+            />
+            <figcaption>Business Model Canvas — ร้าน BB Coffee</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 4 — ระบบสารสนเทศ
+    ======================================== -->
+    <section class="section section--alt" id="section-info" aria-labelledby="info-heading">
+      <div class="container">
+        <div class="section__header fade-in-up">
+          <div class="section__tag">04</div>
+          <h2 class="section__title" id="info-heading">ระบบสารสนเทศ</h2>
+          <p class="section__desc">ระบบดิจิทัลที่รองรับการดำเนินงานของร้าน BB Coffee</p>
+        </div>
+
+        <!-- Image Gallery Grid -->
+        <div class="info-gallery fade-in-up" role="list" aria-label="ระบบสารสนเทศ">
+          <figure class="gallery-item gallery-item--wide" role="listitem">
+            <img
+              src="images/menu.png"
+              alt="ระบบเเสดงเมนู"
+              loading="lazy"
+              class="gallery-img"
+              onerror="handleImgError(this, 'ระบบเเสดงเมนู')"
+            />
+            <figcaption class="gallery-caption">ระบบเเสดงเมนู</figcaption>
+          </figure>
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="images/payment.png"
+              alt="ระบบ Payment"
+              loading="lazy"
+              class="gallery-img"
+              onerror="handleImgError(this, 'ระบบ Payment')"
+            />
+            <figcaption class="gallery-caption">ระบบ Payment</figcaption>
+          </figure>
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="images/dashboard.png"
+              alt="ระบบ Dashboard"
+              loading="lazy"
+              class="gallery-img"
+              onerror="handleImgError(this, 'ระบบ Dashboard')"
+            />
+            <figcaption class="gallery-caption">ระบบ Dashboard</figcaption>
+          </figure>
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="images/report.png"
+              alt="ระบบรายงาน"
+              loading="lazy"
+              class="gallery-img"
+              onerror="handleImgError(this, 'ระบบรายงาน')"
+            />
+            <figcaption class="gallery-caption">ระบบรายงาน</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--wide" role="listitem">
+            <img
+              src="images/Addmenu.png"
+              alt="ระบบจัดการเมนู"
+              loading="lazy"
+              class="gallery-img"
+              onerror="handleImgError(this, 'ระบบจัดการเมนู')"
+            />
+            <figcaption class="gallery-caption">ระบบจัดการเมนู</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--wide" role="listitem">
+            <img
+              src="images/stock.png"
+              alt="ระบบเเสดงสต๊อกสินค้า"
+              loading="lazy"
+              class="gallery-img"
+              onerror="handleImgError(this, 'ระบบเเสดงสต๊อกสินค้า')"
+            />
+            <figcaption class="gallery-caption">ระบบเเสดงสต๊อกสินค้า</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--wide" role="listitem">
+            <img
+              src="images/promotin.png"
+              alt="ระบบเเสดงโปรโมชั่น"
+              loading="lazy"
+              class="gallery-img"
+              onerror="handleImgError(this, 'ระบบเเสดงโปรโมชั่น')"
+            />
+            <figcaption class="gallery-caption">ระบบเเสดงโปรโมชั่น</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 5 — โปรโมชั่น
+    ======================================== -->
+    <section class="section" id="section-promo" aria-labelledby="promo-heading">
+      <div class="container">
+        <div class="section__header fade-in-up">
+          <div class="section__tag">05</div>
+          <h2 class="section__title" id="promo-heading">โปรโมชั่น & กลยุทธ์การขาย</h2>
+          <p class="section__desc">แผนโปรโมชั่นเพื่อเพิ่มยอดขาย</p>
+        </div>
+
+        <div class="promo-layout">
+          <!-- Poster Image -->
+          <div class="promo-poster fade-in-up">
+            <figure class="showcase-figure">
+              <img
+                src="images/promotion.png"
+                alt="โปสเตอร์โปรโมชั่น ร้าน BB Coffee"
+                class="showcase-img"
+                loading="lazy"
+                onerror="this.closest('.showcase-figure').innerHTML=fallbackImg('โปสเตอร์โปรโมชั่น')"
+              />
+              <figcaption>โปรโมชั่น ร้าน BB Coffee</figcaption>
+            </figure>
+          </div>
+
+          <!-- Promo Details -->
+          <div class="promo-details fade-in-up">
+
+            <!-- Promotions -->
+            <article class="card card--promo" aria-label="โปรโมชั่นเพื่อเพิ่มยอดขาย">
+              <div class="card__badge">🎯 โปรโมชั่น</div>
+              <h3 class="card__title">โปรโมชั่นเพื่อเพิ่มยอดขาย</h3>
+              <ul class="promo-list">
+                <li class="promo-item">
+                  <div class="promo-item__icon" aria-hidden="true">💰</div>
+                  <div>
+                    <strong>ซื้อ 1 แถม 1</strong>
+                    <span>เฉพาะเมนูที่ร่วมรายการ</span>
+                  </div>
+                </li>
+                <li class="promo-item">
+                  <div class="promo-item__icon" aria-hidden="true">🎁</div>
+                  <div>
+                    <strong>โปรโมชั่น Check-in</strong>
+                    <span>ถ่ายรูป check-in รับส่วนลด 50 บาท</span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+            <!-- PDCA -->
+            <article class="card" aria-label="PDCA วิเคราะห์และพัฒนา">
+              <h3 class="card__title">การใช้ PDCA วิเคราะห์และพัฒนา</h3>
+              <div class="pdca-grid" role="list">
+                <div class="pdca-step pdca-step--plan" role="listitem">
+                  <span class="pdca-step__label">P</span>
+                  <div>
+                    <strong>Plan</strong>
+                    <p>เพิ่มยอดขายเป็น 100 คน/วัน</p>
+                    <p>สร้าง Brand ให้มีชื่อเสียง</p>
+                  </div>
+                </div>
+                <div class="pdca-step pdca-step--do" role="listitem">
+                  <span class="pdca-step__label">D</span>
+                  <div>
+                    <strong>Do</strong>
+                    <p>เผยแพร่ Promotion ผ่านช่องทางออนไลน์ เช่น Facebook, Instagram และเว็บไซต์</p>
+                  </div>
+                </div>
+                <div class="pdca-step pdca-step--check" role="listitem">
+                  <span class="pdca-step__label">C</span>
+                  <div>
+                    <strong>Check</strong>
+                    <p>ตรวจยอดการขายเครื่องดื่ม/เดือน</p>
+                  </div>
+                </div>
+                <div class="pdca-step pdca-step--act" role="listitem">
+                  <span class="pdca-step__label">A</span>
+                  <div>
+                    <strong>Act</strong>
+                    <p>เพิ่มโปรโม่ชั่นตามฤดูกาล</p>
+                    <p>เมื่อซื้อถึงเป้าหมายราคามีการให้ของเเถม</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================
+       FOOTER
+  ======================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span aria-hidden="true"><img src="images/coffee.svg" alt="BB Coffee Logo"></span>
+            <span>BB Coffee</span>
+          </div>
+          <p class="footer__tagline">บริการด้วยหัวใจ<br>ใส่ใจลูกค้าเหมือนครอบครัว</p>
+        </div>
+        <!-- Quick Links -->
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <h4 class="footer__nav-title">เมนูหลัก</h4>
+          <ul role="list">
+            <li><a href="#section-org">โครงสร้างองค์กร</a></li>
+            <li><a href="#section-chart">แผนผังองค์กร</a></li>
+            <li><a href="#section-model">Business Model</a></li>
+            <li><a href="#section-info">ระบบสารสนเทศ</a></li>
+            <li><a href="#section-promo">โปรโมชั่น</a></li>
+          </ul>
+        </nav>
+        <!-- Services -->
+        <div class="footer__col">
+          <h4 class="footer__nav-title">บริการของเรา</h4>
+          <ul role="list">
+            <li>ขายเครื่องดื่ม</li>
+            <li>ขายของหวาน</li>
+            <li>บริการจัดส่ง</li>
+            <li>บริการร้านนั่ง</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 ร้าน BB Coffee. All rights reserved.</p>
+        <div class="footer__badges" aria-label="มาตรฐานบริษัท">
+          <span class="footer__badge">GMP Certified</span>
+          <span class="footer__badge">Cold Chain Pro</span>
+          <span class="footer__badge">GPS Tracked</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top button -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="กลับขึ้นด้านบน" title="กลับขึ้นด้านบน">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lightbox__overlay" id="lightboxOverlay"></div>
+    <button class="lightbox__close" id="lightboxClose" aria-label="ปิด">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="รูปก่อนหน้า">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="รูปถัดไป">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="lightbox__content">
+      <img class="lightbox__image" id="lightboxImage" src="" alt="" />
+      <div class="lightbox__caption" id="lightboxCaption"></div>
+      <div class="lightbox__counter" id="lightboxCounter"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
